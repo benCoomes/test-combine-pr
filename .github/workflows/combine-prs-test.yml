@@ -8,6 +8,16 @@ on:
         required: false
         default: "dependabot"
         type: string
+      combine_branch_name:
+        description: "Name of combined branch"
+        required: false
+        default: "combined-pr-branch"
+        type: string
+      pr_title:
+        description: "Name of combined PR"
+        required: false
+        default: "Combined PRs"
+        type: string
 jobs:
   combine-prs:
     runs-on: ubuntu-latest
@@ -22,3 +32,5 @@ jobs:
           ci_required: false
           review_required: false
           github_token: ${{ secrets.COMBINE_PR_TOKEN }}
+          combine_branch_name: ${{ inputs.combine_branch_name }}
+          pr_title: ${{ inputs.pr_title }}
