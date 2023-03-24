@@ -19,3 +19,5 @@ jobs:
         uses: github/combine-prs@v2.1.0
         with:
           branch_prefix: ${{ inputs.prefix }}
+          ci_required: false
+          review_required: false
