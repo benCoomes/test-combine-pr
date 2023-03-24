@@ -21,3 +21,4 @@ jobs:
           branch_prefix: ${{ inputs.prefix }}
           ci_required: false
           review_required: false
+          github_token: ${{ secrets.COMBINE_PR_TOKEN }}
