@@ -13,6 +13,16 @@ on:
         required: false
         default: "combined-pr-branch"
         type: string
+      ignore_label:
+        description: "Label to ignore"
+        required: false
+        default: 'no-combine'
+        type: string
+      select_label:
+        description: "Label to select"
+        required: false
+        default: 'please-combine'
+        type: string
       pr_title:
         description: "Name of combined PR"
         required: false
@@ -34,3 +44,5 @@ jobs:
           github_token: ${{ secrets.COMBINE_PR_TOKEN }}
           combine_branch_name: ${{ inputs.combine_branch_name }}
           pr_title: ${{ inputs.pr_title }}
+          ignore_label: ${{ inputs.ignore_label }}
+          select_label: ${{ inputs.select_label }}
