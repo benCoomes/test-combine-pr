@@ -36,7 +36,7 @@ jobs:
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
       - name: combine-prs
         id: combine-prs
-        uses: github/combine-prs@ad04bba4f9bfbe88905408721d179efbe716b548
+        uses: github/combine-prs@fe5c6401898511fc570a0e1ba2daf5f41a079b2a
         with:
           branch_prefix: ${{ inputs.prefix }}
           ci_required: false
