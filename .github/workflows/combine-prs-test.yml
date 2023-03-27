@@ -21,7 +21,7 @@ on:
       select_label:
         description: "Label to select"
         required: false
-        default: 'please-combine'
+        default: ''
         type: string
       pr_title:
         description: "Name of combined PR"
